@@ -1,0 +1,50 @@
+
+# Environment variables and secrets
+
+.env
+
+.env.*
+
+!.env.example
+
+secrets.properties
+
+
+
+# Java / Maven
+
+**/target/
+
+**/build/
+
+*.class
+
+*.log
+
+
+
+# Local uploads and user data
+
+career-ai-backend/careerai-uploads/
+
+career-ai-backend/uploads/
+
+
+
+# IDE files
+
+**/.classpath
+
+**/.project
+
+**/.settings/
+
+**/.factorypath
+
+**/.springBeans
+
+**/.sts4-cache
+
+**/.idea/
+
+**/.vscode/
