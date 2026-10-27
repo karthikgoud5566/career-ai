@@ -48,6 +48,14 @@ public void deleteFile(String storedFileName) {
         if (file == null || file.isEmpty()) {
             throw new IllegalArgumentException("Please select a PDF file");
         }
+     // Reject resumes larger than 5 MB
+        long maxFileSize = 5L * 1024 * 1024;
+
+        if (file.getSize() > maxFileSize) {
+            throw new IllegalArgumentException(
+                    "Resume file must not exceed 5 MB"
+            );
+        }
 
         if (file.getOriginalFilename() == null
                 || !file.getOriginalFilename()

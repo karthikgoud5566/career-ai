@@ -49,3 +49,18 @@ application-local.yaml
 # Local secrets and logs
 *.log
 secrets.properties
+
+
+
+# Application secrets and credentials
+
+application-secrets.properties
+
+application-secrets.yml
+
+
+
+# Uploaded documents
+
+*.pdf
+

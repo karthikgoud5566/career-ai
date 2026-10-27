@@ -20,14 +20,24 @@ public class ResumeAnalysisController {
         this.analysisService = analysisService;
     }
 
+
+    
     @PostMapping("/{resumeId}")
-
-public ResponseEntity<ResumeAnalysisResponse> analyzeResume(
-
+    public ResponseEntity<ResumeAnalysisResponse> analyzeResume(
             @PathVariable Long resumeId,
             Authentication authentication) {
-        ResumeAnalysisResponse analysis = analysisService.analyzeResume(
-                resumeId, authentication.getName());
+
+        System.out.println(
+            "Resume analysis endpoint reached. Authenticated: "
+            + (authentication != null)
+        );
+
+        ResumeAnalysisResponse analysis =
+                analysisService.analyzeResume(
+                        resumeId,
+                        authentication.getName()
+                );
+
         return ResponseEntity.ok(analysis);
     }
 }
