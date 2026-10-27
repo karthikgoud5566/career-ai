@@ -48,3 +48,7 @@ career-ai-backend/uploads/
 **/.idea/
 
 **/.vscode/
+
+# Frontend dependencies and build
+**/node_modules/
+**/dist/
