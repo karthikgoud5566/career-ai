@@ -38,11 +38,19 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173"));
-        configuration.setAllowedMethods(
-                List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(
-                List.of("Authorization", "Content-Type"));
+        	    List.of(
+        	        "http://localhost:5173",
+        	        "https://career-ai-ten-pi.vercel.app"
+        	    )
+        	);
+
+        	configuration.setAllowedMethods(
+        	    List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")
+        	);
+
+        	configuration.setAllowedHeaders(
+        	    List.of("Authorization", "Content-Type")
+        	);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
